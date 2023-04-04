@@ -18,8 +18,7 @@
                FontSize="50"
                HorizontalContentAlignment="Center"
                VerticalContentAlignment="Center"/>
-        <StackPanel Grid.Row="1">
-            
-        </StackPanel>
+        <DocumentViewer Name="docContent"
+                        Grid.Row="1"/>
     </Grid>
 </Page>

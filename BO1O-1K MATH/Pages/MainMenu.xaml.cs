@@ -1,4 +1,6 @@
 ﻿using BO1O_1K_MATH.BD;
+using BO1O_1K_MATH.Pages.Lesson;
+using Path = System.IO.Path;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,12 +28,11 @@ namespace BO1O_1K_MATH.Pages
         public MainMenu(Frame frame)
         {
             InitializeComponent();
-            frame = frame1;
+            frame1 = frame;
             themes = KTP_Matematika_BarashenkovEntities.GetContext().Themes.ToList();
             LViewThemes.Items.Clear(); 
             LViewThemes.ItemsSource = themes;
         }
-
         private void LViewThemes_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
             var currentChapter = KTP_Matematika_BarashenkovEntities.GetContext().Chapters.ToList();
@@ -49,9 +50,9 @@ namespace BO1O_1K_MATH.Pages
             LViewChapter.ItemsSource = currentChapter.ToList();
         }
 
-        private void LViewChapter_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        public void LViewChapter_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-
+            frame1.Navigate(new Les1(frame1));
         }
     }
 }

@@ -20,9 +20,16 @@ namespace BO1O_1K_MATH.Pages.Lesson
     /// </summary>
     public partial class Les1 : Page
     {
-        public Les1()
+        public Frame frame1;
+        public Les1(Frame frame)
         {
             InitializeComponent();
+            frame1 = frame;
+            System.Windows.Xps.Packaging.XpsDocument doc
+            = new System.Windows.Xps.Packaging.XpsDocument(
+            "..\\..\\Documents\\Математика-в-науке_-технике_-экономике_-информационных-технологиях-и-практической-деятельности.xps", System.IO.FileAccess.Read);
+            docContent.Document = doc.GetFixedDocumentSequence();
+
         }
     }
 }
