@@ -1,0 +1,26 @@
+﻿<Page x:Class="BO1O_1K_MATH.Pages.Practice.Tests.Test1_1"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:BO1O_1K_MATH.Pages.Practice.Tests"
+      mc:Ignorable="d" 
+      d:DesignHeight="1080" d:DesignWidth="1920"
+      Title="Test1_1">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="13*"/>
+        </Grid.RowDefinitions>
+        <Label Content="Тест по теме "/>
+        <ScrollViewer Grid.Row="1">
+            <StackPanel Name="Test1">
+                <TextBlock>
+                    Вопрос 1
+                </TextBlock>
+                
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>

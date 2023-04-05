@@ -62,5 +62,14 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+        <Image Name="Back"
+               Visibility="Hidden"
+               VerticalAlignment="Bottom"
+               HorizontalAlignment="Left"
+               Source="/Image/Back.png"
+               Margin="10,0,0,10"
+               Width="70"
+               Height="70" 
+               MouseLeftButtonDown="Back_MouseLeftButtonDown"/>
     </Grid>
 </Page>

@@ -14,11 +14,21 @@
             <RowDefinition Height="77*"/>
             <RowDefinition Height="100"/>
         </Grid.RowDefinitions>
+        
         <Label Content="Введение"
                FontSize="50"
                HorizontalContentAlignment="Center"
                VerticalContentAlignment="Center"/>
+        
         <DocumentViewer Name="docContent"
                         Grid.Row="1"/>
+        
+        <Image Name="Back" 
+               Grid.Row="2"
+               HorizontalAlignment="Left"
+               Source="/Image/Back.png" 
+               Margin="30,14,0,14"
+               Width="70"
+               Height="70" MouseLeftButtonDown="Back_MouseLeftButtonDown"/>
     </Grid>
 </Page>

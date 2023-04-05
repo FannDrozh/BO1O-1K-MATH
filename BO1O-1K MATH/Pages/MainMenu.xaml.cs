@@ -39,6 +39,7 @@ namespace BO1O_1K_MATH.Pages
             var track = ((ListView)sender).SelectedValue as Themes;
             LViewThemes.Visibility = Visibility.Hidden;
             LViewChapter.Visibility = Visibility.Visible;
+            Back.Visibility = Visibility.Visible;
             for (int i = 0; i < currentChapter.Count; i++)
             {
                 if (currentChapter[i].ID_theme != track.ID_Theme)
@@ -52,7 +53,15 @@ namespace BO1O_1K_MATH.Pages
 
         public void LViewChapter_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            frame1.Navigate(new Les1(frame1));
+            var track = ((ListView)sender).SelectedValue as Chapters;
+            frame1.Navigate(new Les1(frame1, track));
+        }
+
+        private void Back_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            Back.Visibility = Visibility.Hidden;
+            LViewChapter.Visibility = Visibility.Hidden;
+            LViewThemes.Visibility = Visibility.Visible;
         }
     }
 }

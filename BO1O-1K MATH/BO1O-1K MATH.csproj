@@ -115,6 +115,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\Practice\Lab\Lab1_1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Practice\Tests\Test1_1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Pages\Lesson\Les1.xaml.cs">
@@ -122,6 +130,12 @@
     </Compile>
     <Compile Include="Pages\MainMenu.xaml.cs">
       <DependentUpon>MainMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Practice\Lab\Lab1_1.xaml.cs">
+      <DependentUpon>Lab1_1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Practice\Tests\Test1_1.xaml.cs">
+      <DependentUpon>Test1_1.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -147,7 +161,11 @@
     <None Include="BD\KTP.edmx.diagram">
       <DependentUpon>KTP.edmx</DependentUpon>
     </None>
+    <None Include="Documents\Theme 1-1\Натуральные, целые, рациональные и иррациональные числа.xps" />
+    <None Include="Documents\Theme 1-2\Арифметический-корень-натуральной-степени.xps" />
+    <None Include="Documents\Theme 1-2\Степенная-функция_-ее-свойства-и-график.xps" />
     <None Include="Documents\Математика-в-науке_-технике_-экономике_-информационных-технологиях-и-практической-деятельности.xps" />
+    <None Include="Documents\Theme 1-1\Понятие-предела.-Бесконечно-убывающая-геометрическая-прогрессия.xps" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -157,9 +175,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Pages\Practice\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
@@ -174,8 +190,9 @@
       <DependentUpon>KTP.edmx</DependentUpon>
       <LastGenOutput>KTP.cs</LastGenOutput>
     </Content>
+    <Resource Include="Image\Back.png" />
     <Resource Include="Иконка-приложения.ico" />
-    <SplashScreen Include="Image\Screenshot 2023-04-02 184647.png" />
+    <SplashScreen Include="Image\Screen.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
