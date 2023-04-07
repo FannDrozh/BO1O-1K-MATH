@@ -1,7 +1,9 @@
 ﻿using BO1O_1K_MATH.BD;
 using System;
 using System.Collections.Generic;
+using System.IO.Packaging;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -13,6 +15,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Xps.Packaging;
 
 namespace BO1O_1K_MATH.Pages.Lesson
 {
@@ -30,53 +33,37 @@ namespace BO1O_1K_MATH.Pages.Lesson
             frame1 = frame;
             thisChapters = chapter;
             chapters = KTP_Matematika_BarashenkovEntities.GetContext().Chapters.ToList();
-            for(int i = 0; i < chapters.Count; i++)
-            {
-                if (chapters[i].ID_Chapter == thisChapters.ID_Chapter)
+            //try
+            //{
+                for (int i = 0; i < chapters.Count; i++)
                 {
-                    if (chapters[i].ID_Chapter == 1)
+                    if (chapters[i].ID_Chapter == thisChapters.ID_Chapter)
                     {
-                        System.Windows.Xps.Packaging.XpsDocument doc
-                        = new System.Windows.Xps.Packaging.XpsDocument(
-                        "..\\..\\Documents\\Математика-в-науке_-технике_-экономике_-информационных-технологиях-и-практической-деятельности.xps", System.IO.FileAccess.Read);
-                        docContent.Document = doc.GetFixedDocumentSequence();
-                    }
-                    else if (chapters[i].ID_Chapter == 2)
-                    {
-                        System.Windows.Xps.Packaging.XpsDocument doc
-                        = new System.Windows.Xps.Packaging.XpsDocument(
-                        "..\\..\\Documents\\Theme 1-1\\Натуральные, целые, рациональные и иррациональные числа.xps", System.IO.FileAccess.Read);
-                        docContent.Document = doc.GetFixedDocumentSequence();
-                    }
-                    else if (chapters[i].ID_Chapter == 3)
-                    {
-                        System.Windows.Xps.Packaging.XpsDocument doc
-                        = new System.Windows.Xps.Packaging.XpsDocument(
-                        "..\\..\\Documents\\Theme 1-1\\Понятие-предела.-Бесконечно-убывающая-геометрическая-прогрессия.xps", System.IO.FileAccess.Read);
-                        docContent.Document = doc.GetFixedDocumentSequence();
-                    }
-                    else if (chapters[i].ID_Chapter == 4)
-                    {
-                        System.Windows.Xps.Packaging.XpsDocument doc
-                        = new System.Windows.Xps.Packaging.XpsDocument(
-                        "..\\..\\Documents\\Theme 1-2\\Арифметический-корень-натуральной-степени.xps", System.IO.FileAccess.Read);
-                        docContent.Document = doc.GetFixedDocumentSequence();
-                    }
-                    else if (chapters[i].ID_Chapter == 6)
-                    {
-                        System.Windows.Xps.Packaging.XpsDocument doc
-                        = new System.Windows.Xps.Packaging.XpsDocument(
-                        "..\\..\\Documents\\Theme 1-2\\Степенная-функция_-ее-свойства-и-график.xps", System.IO.FileAccess.Read);
-                        docContent.Document = doc.GetFixedDocumentSequence();
-                    }
-                    else
-                    {
-                        MessageBoxResult messageBoxResult = MessageBox.Show("Тема в разработке! Ждите следующего обновления!","Внимание!", MessageBoxButton.OK, MessageBoxImage.Information);
+                    //xps file
+                    //var uri = new Uri("pack://application:,,,/..\\..\\documents\\" + chapters[i].Chapter + ".xps");
+                    //var stream = Application.GetResourceStream(uri).Stream;
+                    //Package package = Package.Open(stream);
+                    //PackageStore.AddPackage(uri, package);
+                    //var xpsDoc = new XpsDocument(package, CompressionOption.Maximum, uri.AbsoluteUri);
+                    //var fixedDocumentSequence = xpsDoc.GetFixedDocumentSequence();
+                    //docContent.Document = fixedDocumentSequence; // displaying document in viewer
+                    //xpsDoc.Close();
+                    //pdf file
+                        string filePatch = @"file:///" + @"BO1O-1K MATH/Documents/" + chapters[i].Chapter + @".pdf";
+                        Uri url = new Uri(filePatch);
+                        webBrowser1.Navigate(url);
+                        //System.Windows.Xps.Packaging.XpsDocument doc
+                        //   = new System.Windows.Xps.Packaging.XpsDocument(
+                        //   "..\\..\\Documents\\" + chapters[i].Chapter + ".xps", System.IO.FileAccess.Read);
+                        //docContent.Document = doc.GetFixedDocumentSequence();
+                        break;
                     }
                 }
-            }
-            
-
+            //}
+            //catch 
+            //{
+            //    MessageBoxResult messageBoxResult = MessageBox.Show("Тема в разработке! Ждите следующего обновления!", "Внимание!", MessageBoxButton.OK, MessageBoxImage.Information);
+            //}
         }
 
         private void Back_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
