@@ -14,6 +14,21 @@
     <WarningLevel>4</WarningLevel>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -38,16 +53,12 @@
     <ApplicationIcon>Иконка-приложения.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Aspose.PDF, Version=23.3.1.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
-      <HintPath>..\packages\Aspose.PDF.23.3.1\lib\net4.0\Aspose.PDF.dll</HintPath>
-    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
-    <Reference Include="ReachFramework" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
@@ -107,7 +118,7 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Pages\Lesson\Les1.xaml">
+    <Page Include="Pages\Lesson.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -125,8 +136,8 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Pages\Lesson\Les1.xaml.cs">
-      <DependentUpon>Les1.xaml</DependentUpon>
+    <Compile Include="Pages\Lesson.xaml.cs">
+      <DependentUpon>Lesson.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\MainMenu.xaml.cs">
       <DependentUpon>MainMenu.xaml</DependentUpon>
@@ -161,22 +172,6 @@
     <None Include="BD\KTP.edmx.diagram">
       <DependentUpon>KTP.edmx</DependentUpon>
     </None>
-    <None Include="Documents\0-1 Математика в науке, технике, экономике, информационных технологиях и практической деятельности. Цели и задачи изучения математики.pdf" />
-    <None Include="Documents\1-1-1 Натуральные, целые, рациональные и иррациональные числа.pdf" />
-    <None Include="Documents\1-1-1 Натуральные, целые, рациональные и иррациональные числа.xps" />
-    <None Include="Documents\1-1-2 Понятие предела. Бесконечно убывающая геометрическая прогрессия.pdf" />
-    <None Include="Documents\1-2-1 Арифметический корень натуральной степени.pdf" />
-    <None Include="Documents\1-2-1 Арифметический корень натуральной степени.xps" />
-    <None Include="Documents\1-2-2 Степень с натуральным и действительным показателями.pdf" />
-    <None Include="Documents\1-2-3 Степенная функция, ее свойства и график.pdf" />
-    <None Include="Documents\1-2-3 Степенная функция, ее свойства и график.xps" />
-    <None Include="Documents\1-2-2 Степень с натуральным и действительным показателями.xps" />
-    <None Include="Documents\1-3-1 Взаимно-обратные функции.pdf" />
-    <None Include="Documents\1-3-1 Взаимно-обратные функции.xps" />
-    <None Include="Documents\0-1 Математика в науке, технике, экономике, информационных технологиях и практической деятельности. Цели и задачи изучения математики.xps" />
-    <None Include="Documents\1-1-2 Понятие предела. Бесконечно убывающая геометрическая прогрессия.xps" />
-    <None Include="Documents\1-3-2 Равносильные уравнения и неравентва.pdf" />
-    <None Include="Documents\1-4-1 Показательная функция, ее свойства и график.pdf" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -186,7 +181,10 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Lectures\1-3\1-3-3\" />
+    <Folder Include="Lectures\1-3\1-3-4\" />
+  </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
@@ -201,9 +199,86 @@
       <DependentUpon>KTP.edmx</DependentUpon>
       <LastGenOutput>KTP.cs</LastGenOutput>
     </Content>
+    <Resource Include="Lectures\1-4\1-4-1\1-4-1-01.jpg" />
+    <Resource Include="Lectures\1-4\1-4-1\1-4-1-02.jpg" />
+    <Resource Include="Lectures\1-4\1-4-1\1-4-1-03.jpg" />
+    <Resource Include="Lectures\1-4\1-4-1\1-4-1-04.jpg" />
+    <Resource Include="Lectures\1-4\1-4-1\1-4-1-05.jpg" />
+    <Resource Include="Lectures\1-4\1-4-1\1-4-1-06.jpg" />
+    <Resource Include="Lectures\1-4\1-4-1\1-4-1-07.jpg" />
+    <Resource Include="Lectures\1-4\1-4-1\1-4-1-08.jpg" />
+    <Resource Include="Lectures\1-4\1-4-1\1-4-1-09.jpg" />
+    <Resource Include="Lectures\1-3\1-3-2\1-3-2-01.jpg" />
+    <Resource Include="Lectures\1-3\1-3-2\1-3-2-02.jpg" />
+    <Resource Include="Lectures\1-3\1-3-2\1-3-2-03.jpg" />
+    <Resource Include="Lectures\1-3\1-3-2\1-3-2-04.jpg" />
+    <Resource Include="Lectures\1-3\1-3-2\1-3-2-05.jpg" />
+    <Resource Include="Lectures\1-3\1-3-2\1-3-2-06.jpg" />
+    <Resource Include="Lectures\1-3\1-3-1\1-3-1-01.jpg" />
+    <Resource Include="Lectures\1-3\1-3-1\1-3-1-02.jpg" />
+    <Resource Include="Lectures\1-3\1-3-1\1-3-1-03.jpg" />
+    <Resource Include="Lectures\1-3\1-3-1\1-3-1-04.jpg" />
+    <Resource Include="Lectures\1-3\1-3-1\1-3-1-05.jpg" />
+    <Resource Include="Lectures\1-3\1-3-1\1-3-1-06.jpg" />
+    <Resource Include="Lectures\1-3\1-3-1\1-3-1-07.jpg" />
+    <Resource Include="Lectures\1-2\1-2-3\1-2-3-01.jpg" />
+    <Resource Include="Lectures\1-2\1-2-3\1-2-3-02.jpg" />
+    <Resource Include="Lectures\1-2\1-2-3\1-2-3-03.jpg" />
+    <Resource Include="Lectures\1-2\1-2-3\1-2-3-04.jpg" />
+    <Resource Include="Lectures\1-2\1-2-3\1-2-3-05.jpg" />
+    <Resource Include="Lectures\1-2\1-2-3\1-2-3-06.jpg" />
+    <Resource Include="Lectures\1-2\1-2-3\1-2-3-07.jpg" />
+    <Resource Include="Lectures\1-2\1-2-3\1-2-3-08.jpg" />
+    <Resource Include="Lectures\1-2\1-2-3\1-2-3-09.jpg" />
+    <Resource Include="Lectures\1-2\1-2-3\1-2-3-10.jpg" />
+    <Resource Include="Lectures\1-2\1-2-3\1-2-3-11.jpg" />
+    <Resource Include="Lectures\1-2\1-2-3\1-2-3-12.jpg" />
+    <Resource Include="Lectures\1-2\1-2-2\1-2-1-01.jpg" />
+    <Resource Include="Lectures\1-2\1-2-2\1-2-1-02.jpg" />
+    <Resource Include="Lectures\1-2\1-2-2\1-2-1-03.jpg" />
+    <Resource Include="Lectures\1-2\1-2-2\1-2-1-04.jpg" />
+    <Resource Include="Lectures\1-2\1-2-2\1-2-1-05.jpg" />
+    <Resource Include="Lectures\1-2\1-2-1\1-2-1-01.jpg" />
+    <Resource Include="Lectures\1-2\1-2-1\1-2-1-02.jpg" />
+    <Resource Include="Lectures\1-2\1-2-1\1-2-1-03.jpg" />
+    <Resource Include="Lectures\1-2\1-2-1\1-2-1-04.jpg" />
+    <Resource Include="Lectures\1-2\1-2-1\1-2-1-05.jpg" />
+    <Resource Include="Lectures\1-2\1-2-1\1-2-1-06.jpg" />
+    <Resource Include="Lectures\1-1\1-1-2\1-1-2-01.jpg" />
+    <Resource Include="Lectures\1-1\1-1-2\1-1-2-10.jpg" />
+    <Resource Include="Lectures\1-1\1-1-2\1-1-2-11.jpg" />
+    <Resource Include="Lectures\1-1\1-1-2\1-1-2-02.jpg" />
+    <Resource Include="Lectures\1-1\1-1-2\1-1-2-03.jpg" />
+    <Resource Include="Lectures\1-1\1-1-2\1-1-2-04.jpg" />
+    <Resource Include="Lectures\1-1\1-1-2\1-1-2-05.jpg" />
+    <Resource Include="Lectures\1-1\1-1-2\1-1-2-06.jpg" />
+    <Resource Include="Lectures\1-1\1-1-2\1-1-2-07.jpg" />
+    <Resource Include="Lectures\1-1\1-1-2\1-1-2-08.jpg" />
+    <Resource Include="Lectures\1-1\1-1-2\1-1-2-09.jpg" />
+    <Resource Include="Lectures\1-1\1-1-1\1-1-1-01.jpg" />
+    <Resource Include="Lectures\1-1\1-1-1\1-1-1-02.jpg" />
+    <Resource Include="Lectures\1-1\1-1-1\1-1-1-03.jpg" />
+    <Resource Include="Lectures\1-1\1-1-1\1-1-1-04.jpg" />
+    <Resource Include="Lectures\1-1\1-1-1\1-1-1-05.jpg" />
+    <Resource Include="Lectures\0\0-1\0-1-01.jpg" />
+    <Resource Include="Lectures\0\0-1\0-1-02.jpg" />
+    <Resource Include="Lectures\0\0-1\0-1-03.jpg" />
+    <Resource Include="Lectures\0\0-1\0-1-04.jpg" />
     <Resource Include="Image\Back.png" />
     <Resource Include="Иконка-приложения.ico" />
     <SplashScreen Include="Image\Screen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 и x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

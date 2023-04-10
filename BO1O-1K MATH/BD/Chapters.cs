@@ -17,6 +17,7 @@ namespace BO1O_1K_MATH.BD
         public int ID_Chapter { get; set; }
         public string Chapter { get; set; }
         public Nullable<int> ID_theme { get; set; }
+        public string Numeration { get; set; }
     
         public virtual Themes Themes { get; set; }
     }

@@ -1,5 +1,5 @@
 ﻿using BO1O_1K_MATH.BD;
-using BO1O_1K_MATH.Pages.Lesson;
+using BO1O_1K_MATH.Pages;
 using Path = System.IO.Path;
 using System;
 using System.Collections.Generic;
@@ -15,6 +15,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.IO;
 
 namespace BO1O_1K_MATH.Pages
 {
@@ -25,6 +26,10 @@ namespace BO1O_1K_MATH.Pages
     {
         public Frame frame1;
         List<Themes> themes = new List<Themes>();
+        public BO1O_1K_MATH.BD.Chapters trackC;
+        public BO1O_1K_MATH.BD.Themes trackT;
+
+
         public MainMenu(Frame frame)
         {
             InitializeComponent();
@@ -36,13 +41,13 @@ namespace BO1O_1K_MATH.Pages
         private void LViewThemes_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
             var currentChapter = KTP_Matematika_BarashenkovEntities.GetContext().Chapters.ToList();
-            var track = ((ListView)sender).SelectedValue as Themes;
+            trackT = ((ListView)sender).SelectedValue as Themes;
             LViewThemes.Visibility = Visibility.Hidden;
             LViewChapter.Visibility = Visibility.Visible;
             Back.Visibility = Visibility.Visible;
             for (int i = 0; i < currentChapter.Count; i++)
             {
-                if (currentChapter[i].ID_theme != track.ID_Theme)
+                if (currentChapter[i].ID_theme != trackT.ID_Theme)
                 {
                     currentChapter.RemoveAt(i);
                     i--;
@@ -53,8 +58,15 @@ namespace BO1O_1K_MATH.Pages
 
         public void LViewChapter_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            var track = ((ListView)sender).SelectedValue as Chapters;
-            frame1.Navigate(new Les1(frame1, track));
+            trackC = ((ListView)sender).SelectedValue as Chapters;
+            if (File.Exists(@"../../Lectures/" + trackT.Numeration + "/" + trackC.Numeration + "/" + trackC.Numeration + "-01.jpg"))
+            {
+                frame1.Navigate(new Lesson(frame1, trackC, trackT));
+            }
+            else
+            {
+                MessageBoxResult messageBoxResult = MessageBox.Show("Тема в разработке! Ждите следующего обновления!", "Внимание!", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
         }
 
         private void Back_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)

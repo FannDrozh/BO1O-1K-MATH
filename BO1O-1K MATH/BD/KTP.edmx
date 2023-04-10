@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="Хранилище KTP_Matematika_BarashenkovModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="Хранилище KTP_Matematika_BarashenkovModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Chapters">
           <Key>
             <PropertyRef Name="ID_Chapter" />
@@ -12,6 +12,7 @@
           <Property Name="ID_Chapter" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Chapter" Type="varchar(max)" />
           <Property Name="ID_theme" Type="int" />
+          <Property Name="Numeration" Type="varchar" MaxLength="10" />
         </EntityType>
         <EntityType Name="sysdiagrams">
           <Key>
@@ -30,6 +31,7 @@
           <Property Name="ID_Theme" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Theme" Type="varchar(max)" />
           <Property Name="Description" Type="varchar(max)" />
+          <Property Name="Numeration" Type="varchar" MaxLength="10" />
         </EntityType>
         <Association Name="FK_Chapters_Themes">
           <End Role="Themes" Type="Self.Themes" Multiplicity="0..1" />
@@ -52,8 +54,7 @@
             <End Role="Chapters" EntitySet="Chapters" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="KTP_Matematika_BarashenkovModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -65,6 +66,7 @@
           <Property Name="Chapter" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="ID_theme" Type="Int32" />
           <NavigationProperty Name="Themes" Relationship="Self.FK_Chapters_Themes" FromRole="Chapters" ToRole="Themes" />
+          <Property Name="Numeration" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="sysdiagrams">
           <Key>
@@ -84,6 +86,7 @@
           <Property Name="Theme" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Chapters" Relationship="Self.FK_Chapters_Themes" FromRole="Themes" ToRole="Chapters" />
+          <Property Name="Numeration" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
         </EntityType>
         <Association Name="FK_Chapters_Themes">
           <End Role="Themes" Type="Self.Themes" Multiplicity="0..1" />
@@ -115,6 +118,7 @@
           <EntitySetMapping Name="Chapters">
             <EntityTypeMapping TypeName="KTP_Matematika_BarashenkovModel.Chapters">
               <MappingFragment StoreEntitySet="Chapters">
+                <ScalarProperty Name="Numeration" ColumnName="Numeration" />
                 <ScalarProperty Name="ID_Chapter" ColumnName="ID_Chapter" />
                 <ScalarProperty Name="Chapter" ColumnName="Chapter" />
                 <ScalarProperty Name="ID_theme" ColumnName="ID_theme" />
@@ -135,6 +139,7 @@
           <EntitySetMapping Name="Themes">
             <EntityTypeMapping TypeName="KTP_Matematika_BarashenkovModel.Themes">
               <MappingFragment StoreEntitySet="Themes">
+                <ScalarProperty Name="Numeration" ColumnName="Numeration" />
                 <ScalarProperty Name="ID_Theme" ColumnName="ID_Theme" />
                 <ScalarProperty Name="Theme" ColumnName="Theme" />
                 <ScalarProperty Name="Description" ColumnName="Description" />
