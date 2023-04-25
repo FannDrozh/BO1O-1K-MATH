@@ -199,6 +199,11 @@
       <DependentUpon>KTP.edmx</DependentUpon>
       <LastGenOutput>KTP.cs</LastGenOutput>
     </Content>
+    <Resource Include="Image\FONTask.jpg" />
+    <Resource Include="Image\FON.png" />
+    <Resource Include="Image\FONPract.jpg" />
+    <Resource Include="Image\Close.png" />
+    <Resource Include="Image\ScrollLect.png" />
     <Resource Include="Lectures\1-4\1-4-1\1-4-1-01.jpg" />
     <Resource Include="Lectures\1-4\1-4-1\1-4-1-02.jpg" />
     <Resource Include="Lectures\1-4\1-4-1\1-4-1-03.jpg" />

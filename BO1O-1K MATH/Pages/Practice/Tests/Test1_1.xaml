@@ -15,11 +15,52 @@
         </Grid.RowDefinitions>
         <Label Content="Тест по теме "/>
         <ScrollViewer Grid.Row="1">
-            <StackPanel Name="Test1">
-                <TextBlock>
-                    Вопрос 1
-                </TextBlock>
-                
+            <StackPanel Name="Test1"
+                        HorizontalAlignment="Center">
+                <Label Content="Вопрос 1: Натуральные числа это -"
+                       FontSize="40"/>
+                <RadioButton Content="Целые отрицательные числа"
+                             GroupName="Question1"
+                             FontSize="30"/>
+                <RadioButton Content="Целые положительные числа"
+                             GroupName="Question1"
+                             FontSize="30"/>
+                <RadioButton Content="Целые положительные числа"
+                             GroupName="Question1"
+                             FontSize="30"/>
+
+                <TextBlock Text="Вопрос 2: a:b = c. При каком условии С будет являться натуральным числом?"
+                           FontSize="40"/>
+                <TextBox x:Name="Question4"
+                         HorizontalAlignment="Left"
+                         FontSize="30"
+                         Width="500"/>
+                <!--Делиться нацело-->
+
+                <TextBlock Text="Вопрос 3: Целые числа это -"
+                           FontSize="40"/>
+                <RadioButton Content="натуральные числа, ноль и числа, противоположные натуральным"
+                             GroupName="Question3"
+                             FontSize="30"/>
+                <RadioButton Content="натуральные числа, ноль и числа, схожие с натуральными"
+                             GroupName="Question3"
+                             FontSize="30"/>
+                <RadioButton Content="действильные числа противоположные натуральным"
+                             GroupName="Question3"
+                             FontSize="30"/>
+
+                <Label Content="Вопрос 4: какое множество чисел больше?"
+                       FontSize="40"/>
+                <RadioButton Content="Иррациональные"
+                             GroupName="Question4"
+                             FontSize="30"/>
+                <RadioButton Content="Целые"
+                             GroupName="Question4"
+                             FontSize="30"/>
+                <RadioButton Content="Действиетльные"
+                             GroupName="Question4"
+                             FontSize="30"/>
+
             </StackPanel>
         </ScrollViewer>
     </Grid>

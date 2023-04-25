@@ -16,6 +16,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.IO;
+using BO1O_1K_MATH.Pages.Practice.Lab;
 
 namespace BO1O_1K_MATH.Pages
 {
@@ -45,6 +46,7 @@ namespace BO1O_1K_MATH.Pages
             LViewThemes.Visibility = Visibility.Hidden;
             LViewChapter.Visibility = Visibility.Visible;
             Back.Visibility = Visibility.Visible;
+            Pract.Visibility = Visibility.Visible;
             for (int i = 0; i < currentChapter.Count; i++)
             {
                 if (currentChapter[i].ID_theme != trackT.ID_Theme)
@@ -72,8 +74,28 @@ namespace BO1O_1K_MATH.Pages
         private void Back_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             Back.Visibility = Visibility.Hidden;
+            Pract.Visibility = Visibility.Hidden;
             LViewChapter.Visibility = Visibility.Hidden;
             LViewThemes.Visibility = Visibility.Visible;
+        }
+
+        private void Close_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            MessageBoxButton btnMessageBox = MessageBoxButton.YesNo;
+            MessageBoxImage imgMessageBox = MessageBoxImage.Question;
+            MessageBoxResult boxResult = MessageBox.Show("Вы действительно хотите выйти?","Выход", btnMessageBox, imgMessageBox);
+            switch (boxResult)
+            {
+                case MessageBoxResult.Yes:
+                    System.Windows.Application.Current.Shutdown();
+                    break; 
+                case MessageBoxResult.No:
+                    break;
+            }
+        }
+        private void Pract_Click(object sender, RoutedEventArgs e)
+        {
+            frame1.Navigate(new Lab1_1(frame1, trackT));
         }
     }
 }

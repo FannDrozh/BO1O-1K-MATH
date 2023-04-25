@@ -14,31 +14,52 @@
             <RowDefinition Height="77*"/>
             <RowDefinition Height="100"/>
         </Grid.RowDefinitions>
-
-        <Label Content="Введение"
-               FontSize="50"
-               HorizontalContentAlignment="Center"
-               VerticalContentAlignment="Center"/>
-
+        
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1859*"/>
+                <ColumnDefinition Width="61*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="Введение"
+                       TextAlignment="Center"
+                       x:Name="Vved"
+                       Grid.Column ="0"
+                       FontSize="40"
+                       TextWrapping="Wrap"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"/>
+            <Image x:Name="Close"
+               Width="50"
+               Height="50"
+                   Grid.Column="1"
+               Source="/Image/close.png" 
+               HorizontalAlignment="Right" 
+               VerticalAlignment="Top" 
+               Cursor="Hand" MouseLeftButtonDown="Close_MouseLeftButtonDown"/>
+        </Grid>
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="150"/>
                 <ColumnDefinition />
                 <ColumnDefinition Width="150"/>
             </Grid.ColumnDefinitions>
-            <Button x:Name="Pageback"
-                    Content="@"
-                    FontSize="100" 
-                    Click="Pageback_Click"/>
+            <Image x:Name="Pageback"
+                   Grid.Column="0"
+                   RenderTransformOrigin="0.5,0.5"
+                   Source="/Image/ScrollLect.png" 
+                   MouseLeftButtonDown="Pageback_MouseLeftButtonDown">
+                <Image.RenderTransform>
+                    <ScaleTransform ScaleX="-1"/>
+                </Image.RenderTransform>
+            </Image>
 
             <Image x:Name="LecturesPicture" 
                    Grid.Column="1"/>
 
-            <Button x:Name="Pagenext"
-                    Content="@"
-                    Grid.Column="2"
-                    FontSize="100" 
-                    Click="Pagenext_Click"/>
+            <Image x:Name="Pagenext"
+                   Grid.Column="2"
+                   Source="/Image/ScrollLect.png" 
+                   MouseLeftButtonDown="Pagenext_MouseLeftButtonDown" />
         </Grid>
 
         <Image Name="Back" 

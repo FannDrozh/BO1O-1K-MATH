@@ -5,10 +5,66 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:BO1O_1K_MATH.Pages.Practice.Lab"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="1080" d:DesignWidth="1920"
       Title="Lab1_1">
-
+    <Page.Background>
+        <ImageBrush>
+            <ImageBrush.ImageSource>
+                <BitmapImage UriSource="/Image/FONPract.jpg"/>
+            </ImageBrush.ImageSource>
+        </ImageBrush>
+    </Page.Background>
     <Grid>
-        
+        <Image x:Name="Close"
+               Width="50"
+               Height="50"
+               Source="/Image/close.png" 
+               HorizontalAlignment="Right" 
+               VerticalAlignment="Top" 
+               Cursor="Hand" MouseLeftButtonDown="Close_MouseLeftButtonDown"/>
+        <StackPanel x:Name="Tasks"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center">
+            <TextBlock x:Name="Task1"
+                       FontSize="40"
+                       Foreground="White"
+                       Text="Задание 1" 
+                       FontWeight="Bold" 
+                       MouseLeftButtonDown="Task1_MouseLeftButtonDown"/>
+            <TextBlock x:Name="Task2"
+                       FontSize="40"
+                       Foreground="White"
+                       FontWeight="Bold"
+                       Text="Задание 2" 
+                       MouseLeftButtonDown="Task2_MouseLeftButtonDown"/>
+            <TextBlock x:Name="Task3"
+                       FontSize="40"
+                       FontWeight="Bold"
+                       Foreground="White"
+                       Text="Задание 3" 
+                       MouseLeftButtonDown="Task3_MouseLeftButtonDown"/>
+        </StackPanel>
+        <Image Source="/Image/FONTask.jpg" 
+               x:Name="FonT"
+               Visibility="Collapsed"/>
+        <TextBlock x:Name="Ex1"
+                   FontSize="40"
+                   Text="Пример 1" Margin="810,202,922,813" />
+        <Image Name="Back"
+               Visibility="Hidden"
+               Source="/Image/Back.png" 
+               Width="70"
+               Height="70"
+               Cursor="Hand" 
+               Margin="963,948,887,62" MouseLeftButtonDown="Back_MouseLeftButtonDown"/>
+        <Image Name="BackMain"
+               Source="/Image/Back.png" 
+               Width="70"
+               Height="70"
+               Cursor="Hand" 
+               Margin="963,948,887,62" MouseLeftButtonDown="BackMain_MouseLeftButtonDown"/>
+
+
+
     </Grid>
 </Page>

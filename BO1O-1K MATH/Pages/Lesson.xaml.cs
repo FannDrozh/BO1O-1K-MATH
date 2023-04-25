@@ -40,6 +40,7 @@ namespace BO1O_1K_MATH.Pages
             frame1 = frame;
             thisChapters = chapter;
             thisThemes = theme;
+            Vved.Text = thisChapters.Chapter;
             chapters = KTP_Matematika_BarashenkovEntities.GetContext().Chapters.ToList();
             for(int i = 1; File.Exists(@"../../Lectures/" + thisThemes.Numeration + "/" + thisChapters.Numeration + "/" + thisChapters.Numeration + "-" + zero + i + ".jpg"); i++)
             {
@@ -54,31 +55,23 @@ namespace BO1O_1K_MATH.Pages
                 total++;
 
             }
-            try
+            pagenum = 1;
+            for (int i = 0; i < chapters.Count; i++)
             {
-                pagenum = 1;
-                for (int i = 0; i < chapters.Count; i++)
+                if (chapters[i].ID_Chapter == thisChapters.ID_Chapter)
                 {
-                    if (chapters[i].ID_Chapter == thisChapters.ID_Chapter)
-                    {
-                        
-                        path = @"pack://application:,,,/BO1O-1K MATH;component/Lectures/" + thisThemes.Numeration + "/" + thisChapters.Numeration + "/" + thisChapters.Numeration + "-" + zero + pagenum + ".jpg";
-                        LecturesPicture.Source = new BitmapImage(new Uri(path));
-                        break;
-                    }
+
+                    path = @"pack://application:,,,/BO1O-1K MATH;component/Lectures/" + thisThemes.Numeration + "/" + thisChapters.Numeration + "/" + thisChapters.Numeration + "-" + zero + pagenum + ".jpg";
+                    LecturesPicture.Source = new BitmapImage(new Uri(path));
+                    break;
                 }
-            }
-            catch
-            {
-              //  MessageBoxResult messageBoxResult = MessageBox.Show("Тема в разработке! Ждите следующего обновления!", "Внимание!", MessageBoxButton.OK, MessageBoxImage.Information);
             }
         }
         private void Back_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             frame1.Navigate(new MainMenu(frame1));
         }
-
-        private void Pagenext_Click(object sender, RoutedEventArgs e)
+        private void Pagenext_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             try
             {
@@ -101,10 +94,8 @@ namespace BO1O_1K_MATH.Pages
                 path = @"pack://application:,,,/BO1O-1K MATH;component/Lectures/" + thisThemes.Numeration + "/" + thisChapters.Numeration + "/" + thisChapters.Numeration + "-" + zero + pagenum + ".jpg";
                 LecturesPicture.Source = new BitmapImage(new Uri(path));
             }
-            
         }
-
-        private void Pageback_Click(object sender, RoutedEventArgs e)
+        private void Pageback_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             if (pagenum > 1)
             {
@@ -124,6 +115,21 @@ namespace BO1O_1K_MATH.Pages
             }
             path = @"pack://application:,,,/BO1O-1K MATH;component/Lectures/" + thisThemes.Numeration + "/" + thisChapters.Numeration + "/" + thisChapters.Numeration + "-" + zero + pagenum + ".jpg";
             LecturesPicture.Source = new BitmapImage(new Uri(path));
+        }
+
+        private void Close_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            MessageBoxButton btnMessageBox = MessageBoxButton.YesNo;
+            MessageBoxImage imgMessageBox = MessageBoxImage.Question;
+            MessageBoxResult boxResult = MessageBox.Show("Вы действительно хотите выйти?", "Выход", btnMessageBox, imgMessageBox);
+            switch (boxResult)
+            {
+                case MessageBoxResult.Yes:
+                    System.Windows.Application.Current.Shutdown();
+                    break;
+                case MessageBoxResult.No:
+                    break;
+            }
         }
     }
 }

@@ -7,13 +7,29 @@
       mc:Ignorable="d" 
       d:DesignHeight="1080" d:DesignWidth="1920"
       Title="MainMenu">
-
+    <Page.Background>
+        <ImageBrush>
+            <ImageBrush.ImageSource>
+                <BitmapImage UriSource="/Image/FON.png"/>
+            </ImageBrush.ImageSource>
+        </ImageBrush>
+    </Page.Background>
     <Grid>
+        <Image x:Name="Close"
+               Width="50"
+               Height="50"
+               Source="/Image/close.png" 
+               HorizontalAlignment="Right" 
+               VerticalAlignment="Top" 
+               Cursor="Hand"
+               MouseLeftButtonDown="Close_MouseLeftButtonDown"/>
         <ListView x:Name="LViewThemes"
-                  Background="Aqua" 
+                  Background="#00FAEBD7" 
                   HorizontalContentAlignment="Center" 
                   VerticalContentAlignment="Center" 
-                  MouseDoubleClick="LViewThemes_MouseDoubleClick">
+                  ScrollViewer.VerticalScrollBarVisibility="Disabled"
+                  MouseDoubleClick="LViewThemes_MouseDoubleClick" 
+                  Margin="176,150,169,265" Cursor="">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <Grid VerticalAlignment="Center">
@@ -44,8 +60,12 @@
         </ListView>
         <ListView x:Name="LViewChapter" 
                   Visibility="Hidden"
+                  Background="#00FAEBD7" 
+                  ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                  Opacity="0.6"
                   HorizontalContentAlignment="Center" 
                   VerticalContentAlignment="Center" 
+                  Margin="176,153,169,305"
                   MouseDoubleClick="LViewChapter_MouseDoubleClick">
             <ListView.ItemTemplate>
                 <DataTemplate>
@@ -54,7 +74,7 @@
                                    VerticalAlignment="Center" 
                                    HorizontalAlignment="Center"
                                    TextAlignment="Center"
-                                   TextWrapping="Wrap"
+                                   TextWrapping="WrapWithOverflow"
                                    Grid.Row="0"
                                    FontSize="26" 
                                    FontWeight="Bold"/>
@@ -64,12 +84,22 @@
         </ListView>
         <Image Name="Back"
                Visibility="Hidden"
-               VerticalAlignment="Bottom"
+               VerticalAlignment="Top"
                HorizontalAlignment="Left"
                Source="/Image/Back.png"
-               Margin="10,0,0,10"
+               Margin="760,870,0,0"
                Width="70"
-               Height="70" 
+               Height="70"
+               Cursor="Hand"
                MouseLeftButtonDown="Back_MouseLeftButtonDown"/>
+        <Button Style="{DynamicResource ButtonStyle1}" x:Name="Pract"
+                Content="Практика"
+                Visibility="Hidden"
+                FontSize="26"
+                Foreground="White"
+                Background="#FF379DF1" 
+                Margin="960,870,702,140" 
+                FontWeight="Bold" 
+                Cursor="Hand" Click="Pract_Click"/>
     </Grid>
 </Page>
