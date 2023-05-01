@@ -1,4 +1,5 @@
 ﻿using BO1O_1K_MATH.BD;
+using BO1O_1K_MATH.Pages.Practice.Lab.Tasks;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -33,34 +34,17 @@ namespace BO1O_1K_MATH.Pages.Practice.Lab
 
         private void Task1_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            BackMain.Visibility = Visibility.Hidden;
-            Tasks.Visibility = Visibility.Hidden;
-            FonT.Visibility = Visibility.Visible;
-            Back.Visibility = Visibility.Visible;
+            frame1.Navigate(new Task1_1_1(frame1));
         }
 
         private void Task2_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            BackMain.Visibility = Visibility.Hidden;
-            Tasks.Visibility = Visibility.Hidden;
-            FonT.Visibility = Visibility.Visible;
-            Back.Visibility = Visibility.Visible;
+            frame1.Navigate(new Task1_1_2(frame1));
         }
 
         private void Task3_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            BackMain.Visibility = Visibility.Hidden;
-            Tasks.Visibility = Visibility.Hidden;
-            FonT.Visibility = Visibility.Visible;
-            Back.Visibility = Visibility.Visible;
-        }
 
-        private void Back_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
-            FonT.Visibility = Visibility.Hidden;
-            Back.Visibility = Visibility.Hidden;
-            Tasks.Visibility = Visibility.Visible;
-            BackMain.Visibility = Visibility.Visible;
         }
 
         private void BackMain_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -82,5 +66,6 @@ namespace BO1O_1K_MATH.Pages.Practice.Lab
                     break;
             }
         }
+
     }
 }

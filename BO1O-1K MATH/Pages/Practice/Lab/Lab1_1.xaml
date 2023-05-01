@@ -22,6 +22,7 @@
                HorizontalAlignment="Right" 
                VerticalAlignment="Top" 
                Cursor="Hand" MouseLeftButtonDown="Close_MouseLeftButtonDown"/>
+
         <StackPanel x:Name="Tasks"
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center">
@@ -44,27 +45,12 @@
                        Text="Задание 3" 
                        MouseLeftButtonDown="Task3_MouseLeftButtonDown"/>
         </StackPanel>
-        <Image Source="/Image/FONTask.jpg" 
-               x:Name="FonT"
-               Visibility="Collapsed"/>
-        <TextBlock x:Name="Ex1"
-                   FontSize="40"
-                   Text="Пример 1" Margin="810,202,922,813" />
-        <Image Name="Back"
-               Visibility="Hidden"
-               Source="/Image/Back.png" 
-               Width="70"
-               Height="70"
-               Cursor="Hand" 
-               Margin="963,948,887,62" MouseLeftButtonDown="Back_MouseLeftButtonDown"/>
         <Image Name="BackMain"
                Source="/Image/Back.png" 
                Width="70"
                Height="70"
                Cursor="Hand" 
                Margin="963,948,887,62" MouseLeftButtonDown="BackMain_MouseLeftButtonDown"/>
-
-
 
     </Grid>
 </Page>
