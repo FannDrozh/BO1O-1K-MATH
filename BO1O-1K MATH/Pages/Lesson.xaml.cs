@@ -1,4 +1,5 @@
 ﻿using BO1O_1K_MATH.BD;
+using BO1O_1K_MATH.Pages.Practice.Tests;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -130,6 +131,10 @@ namespace BO1O_1K_MATH.Pages
                 case MessageBoxResult.No:
                     break;
             }
+        }
+        private void TestChapter_Click(object sender, RoutedEventArgs e)
+        {
+            frame1.Navigate(new Test1_1(frame1, thisChapters, thisThemes));
         }
     }
 }

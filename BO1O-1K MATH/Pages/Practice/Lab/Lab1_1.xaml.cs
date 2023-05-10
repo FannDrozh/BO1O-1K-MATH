@@ -1,4 +1,5 @@
 ﻿using BO1O_1K_MATH.BD;
+using BO1O_1K_MATH.Pages.Practice.Lab.Examples;
 using BO1O_1K_MATH.Pages.Practice.Lab.Tasks;
 using System;
 using System.Collections.Generic;
@@ -34,17 +35,17 @@ namespace BO1O_1K_MATH.Pages.Practice.Lab
 
         private void Task1_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            frame1.Navigate(new Task1_1_1(frame1));
+            frame1.Navigate(new Example1_1_1(frame1));
         }
 
         private void Task2_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            frame1.Navigate(new Task1_1_2(frame1));
+            frame1.Navigate(new Example1_1_2(frame1));
         }
 
         private void Task3_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-
+            frame1.Navigate(new Example1_1_3(frame1));
         }
 
         private void BackMain_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)

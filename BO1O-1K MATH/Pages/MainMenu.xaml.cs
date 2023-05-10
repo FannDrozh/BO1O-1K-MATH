@@ -95,7 +95,16 @@ namespace BO1O_1K_MATH.Pages
         }
         private void Pract_Click(object sender, RoutedEventArgs e)
         {
-            frame1.Navigate(new Lab1_1(frame1, trackT));
+            string path = trackT.Numeration;
+            switch (path)
+            {
+                case "1-1":
+                    frame1.Navigate(new Lab1_1(frame1, trackT));
+                    break;
+                default:
+                    MessageBox.Show("Практики по данному разделу пока нет!");
+                    break;
+            }
         }
     }
 }

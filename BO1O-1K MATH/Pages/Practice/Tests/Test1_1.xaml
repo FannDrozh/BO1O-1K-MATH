@@ -12,34 +12,38 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="2*"/>
             <RowDefinition Height="13*"/>
+            <RowDefinition Height="2*"/>
         </Grid.RowDefinitions>
-        <Label Content="Тест по теме "/>
+        <Label x:Name="LabelChapter"/>
         <ScrollViewer Grid.Row="1">
             <StackPanel Name="Test1"
                         HorizontalAlignment="Center">
+                <!--Вопрос 1-->
                 <Label Content="Вопрос 1: Натуральные числа это -"
                        FontSize="40"/>
                 <RadioButton Content="Целые отрицательные числа"
                              GroupName="Question1"
                              FontSize="30"/>
                 <RadioButton Content="Целые положительные числа"
+                             x:Name="Q1"
                              GroupName="Question1"
                              FontSize="30"/>
-                <RadioButton Content="Целые положительные числа"
+                <RadioButton Content="Целые числа"
                              GroupName="Question1"
                              FontSize="30"/>
-
+                <!--Вопрос 2-->
                 <TextBlock Text="Вопрос 2: a:b = c. При каком условии С будет являться натуральным числом?"
                            FontSize="40"/>
-                <TextBox x:Name="Question4"
+                <TextBox x:Name="Q2"
                          HorizontalAlignment="Left"
                          FontSize="30"
                          Width="500"/>
-                <!--Делиться нацело-->
-
+                <!--делиться нацело-->
+                <!--Вопрос 3-->
                 <TextBlock Text="Вопрос 3: Целые числа это -"
                            FontSize="40"/>
                 <RadioButton Content="натуральные числа, ноль и числа, противоположные натуральным"
+                             x:Name="Q3"
                              GroupName="Question3"
                              FontSize="30"/>
                 <RadioButton Content="натуральные числа, ноль и числа, схожие с натуральными"
@@ -48,7 +52,7 @@
                 <RadioButton Content="действильные числа противоположные натуральным"
                              GroupName="Question3"
                              FontSize="30"/>
-
+                <!--Вопрос 4-->
                 <Label Content="Вопрос 4: какое множество чисел больше?"
                        FontSize="40"/>
                 <RadioButton Content="Иррациональные"
@@ -58,10 +62,30 @@
                              GroupName="Question4"
                              FontSize="30"/>
                 <RadioButton Content="Действиетльные"
+                             x:Name="Q4"
                              GroupName="Question4"
                              FontSize="30"/>
+                
 
             </StackPanel>
         </ScrollViewer>
+        <Button Style="{DynamicResource ButtonStyle1}"
+                x:Name="TestChapter"
+                Content="Проверить тест"
+                Grid.Row="2"
+                FontSize="26"
+                Foreground="White"
+                Background="#FF379DF1" 
+                FontWeight="Bold" 
+                Cursor="Hand" 
+                Width="355"
+                Height="70" Click="TestChapter_Click" />
+        <Image Name="Back" 
+               Grid.Row="2"
+               HorizontalAlignment="Left"
+               Source="/Image/Back.png" 
+               Width="70"
+               Height="70" 
+               MouseLeftButtonDown="Back_MouseLeftButtonDown" Margin="30,28,0,29"/>
     </Grid>
 </Page>

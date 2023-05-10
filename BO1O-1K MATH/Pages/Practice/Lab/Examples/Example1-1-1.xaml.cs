@@ -16,17 +16,16 @@ using System.Windows.Shapes;
 namespace BO1O_1K_MATH.Pages.Practice.Lab.Tasks
 {
     /// <summary>
-    /// Логика взаимодействия для Task1_1_1.xaml
+    /// Логика взаимодействия для Example1_1_1.xaml
     /// </summary>
-    public partial class Task1_1_1 : Page
+    public partial class Example1_1_1 : Page
     {
         public Frame frame1;
-        public Task1_1_1(Frame frame)
+        public Example1_1_1(Frame frame)
         {
             InitializeComponent();
             frame1 = frame;
         }
-
         private void Back_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             frame1.Navigate(new Lab1_1(frame1, null));
@@ -36,14 +35,14 @@ namespace BO1O_1K_MATH.Pages.Practice.Lab.Tasks
         {
             if ((Ex1_1.IsChecked.Equals(true) && Ex1_4.IsChecked.Equals(true) && Ex1_5.IsChecked.Equals(true)) && (Ex1_2.IsChecked.Equals(false) && Ex1_3.IsChecked.Equals(false) && Ex1_6.IsChecked.Equals(false)))
             {
-                
+
             }
             else
             {
                 MessageBox.Show("У тебя ошибка в первом задании!");
             }
 
-            if(Ex2.Text == "36") 
+            if (Ex2.Text == "36")
             {
 
             }
