@@ -18,7 +18,7 @@
         <!--Задание 1-->
         <TextBlock Text="Пример 1: Отметь рациональные числа, которые находятся между числами 0,109 и 1,959"
                    FontSize="37"
-                   Margin="61,48,1108,882"
+                   Margin="61,48,1152,882"
                    TextWrapping="Wrap"/>
         <CheckBox Content="0,209"
                   x:Name="Ex1_1"
@@ -56,6 +56,24 @@
                   HorizontalAlignment="Left" 
                   Margin="61,490,0,0" 
                   VerticalAlignment="Top" Height="50" Width="256"/>
+        <Rectangle x:Name="RecEx1F"
+                   Fill="LightPink"
+                   RadiusX="43"
+                   RadiusY="43"
+                   Opacity="0.5"
+                   Stroke="Red"
+                   StrokeThickness="5"
+                   Visibility="Hidden"
+                   Margin="10,40,1108,538"/>
+        <Rectangle Fill="LightGreen"
+                   x:Name="RecEx1T"
+                   RadiusX="43"
+                   RadiusY="43"
+                   Opacity="0.5"
+                   Stroke="Green"
+                   StrokeThickness="5"
+                   Visibility="Hidden"
+                   Margin="10,40,1108,538"/>
 
         <!--Задание 2-->
         <TextBlock Text="Пример 2: Сосчитай количество положительных обыкновенных правильных несократимых дробей со знаменателем, равным 61."
@@ -68,6 +86,24 @@
         <TextBox x:Name="Ex2"
                  FontSize="37" 
                  Margin="211,841,1609,189"/>
+        <Rectangle x:Name="RecEx2F"
+                   Fill="LightPink"
+                   RadiusX="43"
+                   RadiusY="43"
+                   Opacity="0.5"
+                   Stroke="Red"
+                   StrokeThickness="5"
+                   Visibility="Hidden"
+                   Margin="10,592,1152,189"/>
+        <Rectangle x:Name="RecEx2T"
+                   Fill="LightGreen"
+                   RadiusX="43"
+                   RadiusY="43"
+                   Opacity="0.5"
+                   Stroke="Green"
+                   StrokeThickness="5"
+                   Visibility="Hidden"
+                   Margin="10,592,1152,189"/>
 
         <!--Задание 3-->
         <TextBlock Text="Пример 3: Запиши 6,434343... в виде бесконечной десятичной периодической дроби"
@@ -83,6 +119,24 @@
         <TextBox x:Name="Ex3_2"
                  FontSize="37"
                  Margin="1364,192,459,838"/>
+        <Rectangle x:Name="RecEx3F"
+                   Fill="LightPink"
+                   RadiusX="43"
+                   RadiusY="43"
+                   Opacity="0.5"
+                   Stroke="Red"
+                   StrokeThickness="5"
+                   Visibility="Hidden"
+                   Margin="1063,40,56,838"/>
+        <Rectangle x:Name="RecEx3T"
+                   Fill="LightGreen"
+                   RadiusX="43"
+                   RadiusY="43"
+                   Opacity="0.5"
+                   Stroke="Green"
+                   StrokeThickness="5"
+                   Visibility="Hidden"
+                   Margin="1063,40,56,838"/>
 
         <!--Задание 4-->
         <TextBlock Text="Пример 4: Запиши число ввиде обыкновенной дроби"
@@ -160,6 +214,24 @@
         <TextBox x:Name="Ex4_8"
                  FontSize="37" 
                  Margin="1565,643,264,389"/>
+        <Rectangle x:Name="RecEx4F"
+                   Fill="LightPink"
+                   RadiusX="43"
+                   RadiusY="43"
+                   Opacity="0.5"
+                   Stroke="Red"
+                   StrokeThickness="5"
+                   Visibility="Hidden"
+                   Margin="1063,286,210,390"/>
+        <Rectangle x:Name="RecEx4T"
+                   Fill="LightGreen"
+                   RadiusX="43"
+                   RadiusY="43"
+                   Opacity="0.5"
+                   Stroke="Green"
+                   StrokeThickness="5"
+                   Visibility="Hidden"
+                   Margin="1063,286,210,390"/>
 
         <Button x:Name="CheckT1"
                 Style="{DynamicResource ButtonStyle1}"

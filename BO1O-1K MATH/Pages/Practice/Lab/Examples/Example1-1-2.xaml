@@ -26,6 +26,24 @@
         <TextBox x:Name="Ex1"
                  FontSize="37" 
                  Margin="212,291,1510,736"/>
+        <Rectangle x:Name="RecEx1F"
+                   Fill="LightPink"
+                   RadiusX="43"
+                   RadiusY="43"
+                   Opacity="0.5"
+                   Stroke="Red"
+                   StrokeThickness="5"
+                   Visibility="Hidden"
+                   Margin="10,40,1057,736"/>
+        <Rectangle Fill="LightGreen"
+                   x:Name="RecEx1T"
+                   RadiusX="43"
+                   RadiusY="43"
+                   Opacity="0.5"
+                   Stroke="Green"
+                   StrokeThickness="5"
+                   Visibility="Hidden"
+                   Margin="10,40,1057,736"/>
 
         <!--Задание 2-->
         <TextBlock Text="Пример 2: Четыре школьника сделали в магазине канцелярских товаров следующие покупки: первый купил пенал и ластик, заплатив 40 коп; второй купил ластик и карандаш, заплатив 12 коп. третий купил пенал, карандаш и две тетради, заплатив 50коп.; четвёртый купил пенал и тетрадь. Сколько заплатил четвёртый школьник?"
@@ -38,6 +56,24 @@
         <TextBox x:Name="Ex2"
                  FontSize="37" 
                  Margin="212,839,1609,188"/>
+        <Rectangle x:Name="RecEx2F"
+                   Fill="LightPink"
+                   RadiusX="43"
+                   RadiusY="43"
+                   Opacity="0.5"
+                   Stroke="Red"
+                   StrokeThickness="5"
+                   Visibility="Hidden"
+                   Margin="10,394,1057,188"/>
+        <Rectangle x:Name="RecEx2T"
+                   Fill="LightGreen"
+                   RadiusX="43"
+                   RadiusY="43"
+                   Opacity="0.5"
+                   Stroke="Green"
+                   StrokeThickness="5"
+                   Visibility="Hidden"
+                   Margin="10,394,1057,188"/>
 
         <!--Задание 3-->
         <TextBlock Text="Пример 3: Около дома посажены липы и берёзы, причем их общее количество больше 14. Если увеличить вдвое количество лип, а количество берёз увеличить на 18, то берёз станет больше, чем лип. Если же увеличить вдвое количество берёз, не изменяя количества лип, то лип всё равно будет больше, чем берёз. Сколько лип и сколько берёз было посажено?"
@@ -53,6 +89,24 @@
         <TextBox x:Name="Ex3_2"
                  FontSize="37" 
                  Margin="1462,690,358,337"/>
+        <Rectangle x:Name="RecEx3F"
+                   Fill="LightPink"
+                   RadiusX="43"
+                   RadiusY="43"
+                   Opacity="0.5"
+                   Stroke="Red"
+                   StrokeThickness="5"
+                   Visibility="Hidden"
+                   Margin="1058,136,56,337"/>
+        <Rectangle x:Name="RecEx3T"
+                   Fill="LightGreen"
+                   RadiusX="43"
+                   RadiusY="43"
+                   Opacity="0.5"
+                   Stroke="Green"
+                   StrokeThickness="5"
+                   Visibility="Hidden"
+                   Margin="1058,136,56,337"/>
 
         <Button x:Name="CheckT1"
                 Style="{DynamicResource ButtonStyle1}"

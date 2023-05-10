@@ -34,27 +34,27 @@ namespace BO1O_1K_MATH.Pages.Practice.Lab.Examples
         {
             if (Ex1.Text == "35")
             {
-
+                RecEx1T.Visibility = Visibility.Visible;
             }
             else
             {
-                MessageBox.Show("У тебя ошибка в первом задании");
+                RecEx1F.Visibility = Visibility.Visible;
             }
             if (Ex2.Text == "39")
             {
-
+                RecEx2T.Visibility = Visibility.Visible;
             }
             else
             {
-                MessageBox.Show("У тебя ошибка во втором задании!");
+                RecEx2F.Visibility = Visibility.Visible;
             }
             if (Ex3_1.Text == "11" && Ex3_2.Text == "5")
             {
-
+                RecEx3T.Visibility = Visibility.Visible;
             }
             else
             {
-                MessageBox.Show("У тебя ошибка в третьем задании задании!");
+                RecEx3F.Visibility = Visibility.Visible;
             }
         }
     }

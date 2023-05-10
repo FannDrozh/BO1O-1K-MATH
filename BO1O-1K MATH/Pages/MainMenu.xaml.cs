@@ -102,7 +102,7 @@ namespace BO1O_1K_MATH.Pages
                     frame1.Navigate(new Lab1_1(frame1, trackT));
                     break;
                 default:
-                    MessageBox.Show("Практики по данному разделу пока нет!");
+                    MessageBox.Show("Практики по данной теме нет!");
                     break;
             }
         }

@@ -15,6 +15,7 @@
         </ImageBrush>
     </Page.Background>
     <Grid>
+        <!--Задание 1-->
         <TextBlock FontSize="40"
                    Text="Пример 1: Отметь натуральные числа"
                    Margin="71,40,1145,976"/>
@@ -54,6 +55,24 @@
                   HorizontalAlignment="Left" 
                   Margin="58,341,0,0" 
                   VerticalAlignment="Top" Height="50" Width="256"/>
+        <Rectangle x:Name="RecEx1F"
+                   Fill="LightPink"
+                   RadiusX="43"
+                   RadiusY="43"
+                   Opacity="0.5"
+                   Stroke="Red"
+                   StrokeThickness="5"
+                   Visibility="Hidden"
+                   Margin="10,40,1110,683"/>
+        <Rectangle Fill="LightGreen"
+                   x:Name="RecEx1T"
+                   RadiusX="43"
+                   RadiusY="43"
+                   Opacity="0.5"
+                   Stroke="Green"
+                   StrokeThickness="5"
+                   Visibility="Hidden"
+                   Margin="10,40,1110,683"/>
 
         <!--Задание 2-->
         <TextBlock FontSize="40"
@@ -68,6 +87,24 @@
         <TextBox x:Name="Ex2"
                  FontSize="40" 
                  Margin="212,641,1510,386"/>
+        <Rectangle x:Name="RecEx2F"
+                   Fill="LightPink"
+                   RadiusX="43"
+                   RadiusY="43"
+                   Opacity="0.5"
+                   Stroke="Red"
+                   StrokeThickness="5"
+                   Visibility="Hidden"
+                   Margin="10,442,1207,384"/>
+        <Rectangle x:Name="RecEx2T"
+                   Fill="LightGreen"
+                   RadiusX="43"
+                   RadiusY="43"
+                   Opacity="0.5"
+                   Stroke="Green"
+                   StrokeThickness="5"
+                   Visibility="Hidden"
+                   Margin="10,442,1207,384"/>
 
         <!--Задание 3-->
         <TextBlock FontSize="40"
@@ -98,6 +135,25 @@
                   HorizontalAlignment="Left" 
                   Margin="1166,341,0,0" 
                   VerticalAlignment="Top" Height="50" Width="256"/>
+        <Rectangle x:Name="RecEx3F"
+                   Fill="LightPink"
+                   RadiusX="43"
+                   RadiusY="43"
+                   Opacity="0.5"
+                   Stroke="Red"
+                   StrokeThickness="5"
+                   Visibility="Hidden"
+                   Margin="1108,34,108,683"/>
+        <Rectangle x:Name="RecEx3T"
+                   Fill="LightGreen"
+                   RadiusX="43"
+                   RadiusY="43"
+                   Opacity="0.5"
+                   Stroke="Green"
+                   StrokeThickness="5"
+                   Visibility="Hidden"
+                   Margin="1108,34,108,683"/>
+
 
         <!--Задание 4-->
         <TextBlock FontSize="40"
@@ -115,6 +171,24 @@
         <TextBox x:Name="Ex4_2"
                  FontSize="40" 
                  Margin="1462,641,399,386"/>
+        <Rectangle x:Name="RecEx4F"
+                   Fill="LightPink"
+                   RadiusX="43"
+                   RadiusY="43"
+                   Opacity="0.5"
+                   Stroke="Red"
+                   StrokeThickness="5"
+                   Visibility="Hidden"
+                   Margin="1108,442,60,384"/>
+        <Rectangle x:Name="RecEx4T"
+                   Fill="LightGreen"
+                   RadiusX="43"
+                   RadiusY="43"
+                   Opacity="0.5"
+                   Stroke="Green"
+                   StrokeThickness="5"
+                   Visibility="Hidden"
+                   Margin="1108,442,60,384"/>
 
         <Button x:Name="CheckT1"
                 Style="{DynamicResource ButtonStyle1}"

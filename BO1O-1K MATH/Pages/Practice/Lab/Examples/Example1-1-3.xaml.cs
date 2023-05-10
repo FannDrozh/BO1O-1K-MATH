@@ -34,35 +34,35 @@ namespace BO1O_1K_MATH.Pages.Practice.Lab.Examples
         {
             if ((Ex1_1.IsChecked.Equals(true) && Ex1_2.IsChecked.Equals(true) && Ex1_5.IsChecked.Equals(true)) && (Ex1_3.IsChecked.Equals(false) && Ex1_4.IsChecked.Equals(false) && Ex1_6.IsChecked.Equals(false)))
             {
-
+                RecEx1T.Visibility = Visibility.Visible;
             }
             else
             {
-                MessageBox.Show("У тебя ошибка в первом задании");
+                RecEx1F.Visibility = Visibility.Visible;
             }
             if (Ex2.Text == "60")
             {
-
+                RecEx2T.Visibility = Visibility.Visible;
             }
             else
             {
-                MessageBox.Show("У тебя ошибка во втором задании!");
+                RecEx2F.Visibility = Visibility.Visible;
             }
             if (Ex3_1.Text == "6" && Ex3_2.Text == "43")
             {
-
+                RecEx3T.Visibility = Visibility.Visible;
             }
             else
             {
-                MessageBox.Show("У тебя ошибка в третьем задании задании!");
+                RecEx3F.Visibility = Visibility.Visible;
             }
             if ((Ex4_1.Text == "31" && Ex4_2.Text == "25") && (Ex4_3.Text == "3" && Ex4_4.Text == "100") && (Ex4_5.Text == "9" && Ex4_6.Text == "5") && (Ex4_7.Text == "31" && Ex4_8.Text == "10"))
             {
-
+                RecEx4T.Visibility = Visibility.Visible;
             }
             else
             {
-                MessageBox.Show("У тебя ошибка в четвёртом задании задании задании!");
+                RecEx4F.Visibility = Visibility.Visible;
             }
         }
     }

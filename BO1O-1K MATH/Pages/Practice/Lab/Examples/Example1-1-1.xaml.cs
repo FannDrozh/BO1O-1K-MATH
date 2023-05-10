@@ -35,38 +35,38 @@ namespace BO1O_1K_MATH.Pages.Practice.Lab.Tasks
         {
             if ((Ex1_1.IsChecked.Equals(true) && Ex1_4.IsChecked.Equals(true) && Ex1_5.IsChecked.Equals(true)) && (Ex1_2.IsChecked.Equals(false) && Ex1_3.IsChecked.Equals(false) && Ex1_6.IsChecked.Equals(false)))
             {
-
+                RecEx1T.Visibility = Visibility.Visible;
             }
             else
             {
-                MessageBox.Show("У тебя ошибка в первом задании!");
+                RecEx1F.Visibility = Visibility.Visible;
             }
 
             if (Ex2.Text == "36")
             {
-
+                RecEx2T.Visibility = Visibility.Visible;
             }
             else
             {
-                MessageBox.Show("У тебя ошибка во втором задании!");
+                RecEx2F.Visibility = Visibility.Visible;
             }
 
             if ((Ex3_1.IsChecked.Equals(true) && Ex3_3.IsChecked.Equals(true)) && (Ex3_2.IsChecked.Equals(false) && Ex3_4.IsChecked.Equals(false)))
             {
-
+                RecEx3T.Visibility = Visibility.Visible;
             }
             else
             {
-                MessageBox.Show("У тебя ошибка в третьем задании задании!");
+                RecEx3F.Visibility = Visibility.Visible;
             }
 
             if (Ex4_1.Text == "51" && Ex4_2.Text == "19")
             {
-
+                RecEx4T.Visibility = Visibility.Visible;
             }
             else
             {
-                MessageBox.Show("У тебя ошибка в четвёртом задании!");
+                RecEx4F.Visibility = Visibility.Visible;
             }
         }
     }

@@ -41,7 +41,7 @@ namespace BO1O_1K_MATH.Pages.Practice.Tests
         {
             if (Q1.IsChecked.Equals(true) && Q2.Text == "делится нацело" || Q2.Text == "Делится нацело" && Q3.IsChecked.Equals(true) && Q4.IsChecked.Equals(true))
             {
-                MessageBox.Show("Ты решил всё верно!", "Проверка");
+                MessageBox.Show("Ты решил всё верно!", "Проверка", MessageBoxButton.OK, MessageBoxImage.Information);
             }
             else
             {

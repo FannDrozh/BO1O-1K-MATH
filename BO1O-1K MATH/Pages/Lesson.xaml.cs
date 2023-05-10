@@ -134,6 +134,15 @@ namespace BO1O_1K_MATH.Pages
         }
         private void TestChapter_Click(object sender, RoutedEventArgs e)
         {
+            //switch (thisChapters.Numeration)
+            //{
+            //    case "1-1-1":
+            //        frame1.Navigate(new Test1_1(frame1, thisChapters, thisThemes));
+            //        break;
+            //    default:
+            //        MessageBox.Show("Поданной теме тестов нет!", "Внимание!", MessageBoxButton.OK, MessageBoxImage.Information);
+            //        break;
+            //}
             frame1.Navigate(new Test1_1(frame1, thisChapters, thisThemes));
         }
     }
