@@ -234,7 +234,6 @@
                    Margin="1063,286,210,390"/>
 
         <Button x:Name="CheckT1"
-                Style="{DynamicResource ButtonStyle1}"
                 Content="Проверить"
                 FontSize="26"
                 Margin="832,937,830,73"

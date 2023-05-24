@@ -29,7 +29,7 @@
                   VerticalContentAlignment="Center" 
                   ScrollViewer.VerticalScrollBarVisibility="Disabled"
                   MouseDoubleClick="LViewThemes_MouseDoubleClick" 
-                  Margin="176,150,169,265" Cursor="">
+                  Margin="359,153,352,265">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <Grid VerticalAlignment="Center">
@@ -65,7 +65,7 @@
                   Opacity="0.6"
                   HorizontalContentAlignment="Center" 
                   VerticalContentAlignment="Center" 
-                  Margin="176,153,169,305"
+                  Margin="359,153,352,265"
                   MouseDoubleClick="LViewChapter_MouseDoubleClick">
             <ListView.ItemTemplate>
                 <DataTemplate>
@@ -92,7 +92,7 @@
                Height="70"
                Cursor="Hand"
                MouseLeftButtonDown="Back_MouseLeftButtonDown"/>
-        <Button Style="{DynamicResource ButtonStyle1}" x:Name="Pract"
+        <Button x:Name="Pract"
                 Content="Практика"
                 Visibility="Hidden"
                 FontSize="26"

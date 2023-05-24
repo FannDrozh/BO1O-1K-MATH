@@ -8,7 +8,7 @@
       d:DesignHeight="1080" d:DesignWidth="1920"
       Title="Test1_1">
 
-    <Grid>
+    <Grid Cursor="">
         <Grid.RowDefinitions>
             <RowDefinition Height="2*"/>
             <RowDefinition Height="13*"/>
@@ -23,7 +23,7 @@
                        FontSize="40"/>
                 <RadioButton Content="Целые отрицательные числа"
                              GroupName="Question1"
-                             FontSize="30"/>
+                             FontSize="30" />
                 <RadioButton Content="Целые положительные числа"
                              x:Name="Q1"
                              GroupName="Question1"
@@ -69,8 +69,8 @@
 
             </StackPanel>
         </ScrollViewer>
-        <Button Style="{DynamicResource ButtonStyle1}"
-                x:Name="TestChapter"
+
+        <Button x:Name="TestChapter"
                 Content="Проверить тест"
                 Grid.Row="2"
                 FontSize="26"
@@ -79,7 +79,9 @@
                 FontWeight="Bold" 
                 Cursor="Hand" 
                 Width="355"
-                Height="70" Click="TestChapter_Click" />
+                Height="70"
+                Click="TestChapter_Click"/>
+
         <Image Name="Back" 
                Grid.Row="2"
                HorizontalAlignment="Left"

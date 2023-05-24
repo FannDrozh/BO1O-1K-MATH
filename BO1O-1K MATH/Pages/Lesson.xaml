@@ -62,8 +62,7 @@
                    MouseLeftButtonDown="Pagenext_MouseLeftButtonDown" />
         </Grid>
 
-        <Button Style="{DynamicResource ButtonStyle1}"
-                x:Name="TestChapter"
+        <Button x:Name="TestChapter"
                 Content="Тест по разделу"
                 Grid.Row="2"
                 FontSize="26"

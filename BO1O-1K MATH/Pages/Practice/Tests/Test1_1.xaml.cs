@@ -48,5 +48,6 @@ namespace BO1O_1K_MATH.Pages.Practice.Tests
                 MessageBox.Show("Ты допустил ошибки!", "Проверка", MessageBoxButton.OK, MessageBoxImage.Information);
             }
         }
+
     }
 }
